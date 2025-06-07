@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Project Basic js/Ishushi.css" />
+    <title>Ishushi</title>
+    <link rel="stylesheet" href="/CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="/JS/bootstrap.bundle.min.js" />
+  </head>
+  <body>
+    <div
+      class="container p-1 bg-primary mt-3 text-dark rounded-5 border-3 border-dark border text-center"
+    >
+      <h5>This is my new concept for learning basic js project</h5>
+    </div>
+    <!-- HELLO THIS IS THE BEGIGNING JS JOURNY FOR ME LET'S GOOOO -->
+    <br />
+    <!-- ____________________ -->
+    <div class="container">
+      <ul>
+        <li>
+          <p>This is the mode changer.</p>
+        </li>
+        <div class="btn btn-primary" id="Mode">Mode</div>
+        <br />
+        <br />
+        <hr />
+        <!-- ____________________ -->
+        <li>
+          <p>
+            This is the background color changer. First is a according array and
+            second is a according random index. third is genrate color with hex
+            color & it's random.
+          </p>
+          <div class="button-group d-flex justify-content-evenly">
+            <div
+              col-6
+              class="btn btn-outline-success text-light"
+              id="bg_changer"
+            >
+              Bg-changer
+            </div>
+            <div
+              col-6
+              class="btn btn-outline-danger text-light"
+              id="bg_changer2"
+            >
+              Radom_Bg
+            </div>
+            <div
+              col-6
+              class="btn btn-outline-warning text-light"
+              id="hex_color"
+            >
+              Hex_color
+            </div>
+          </div>
+        </li>
+        <br />
+        <hr />
+        <!-- ___________________________________________________________________ -->
+        <li>
+          <p>This is a game. rock paper scissors.</p>
+          <br />
+          <div class="container d-flex justify-content-evenly p-1">
+            <div class="choice fs-1 btn btn-outline-light" id="Rock">Rock</div>
+            <div class="choice fs-1 btn btn-outline-light" id="Paper">
+              Paper
+            </div>
+            <div class="choice fs-1 btn btn-outline-light" id="Scissors">
+              Scissors
+            </div>
+          </div>
+          <br />
+          <p class="result text-center text-dark rounded-5 fs-2">
+            Play Your Move.
+          </p>
+          <div class="container fs-5 raw d-flex justify-content-between">
+            <p class="m-1 fs-3 border border-3 rounded-3 p-2">
+              USER SCORE : <span class="uscore fs-3">0</span>
+            </p>
+            <p class="m-1 fs-3 border border-3 rounded-3 p-2">
+              COMPUTER SCORE: <span class="cscore fs-3">0</span>
+            </p>
+          </div>
+        </li>
+        <br />
+        <hr />
+        <li>
+          <div class="mb-3">
+            <label for="genrate" class="form-label"
+              >Text Genrate</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="genrate"
+              placeholder="Type something"
+            />
+          </div>
+          <div class="container" id="typedText"><ul>Todo List of ...</ul></div>
+        </li>
+      </ul>
+      <br />
+    </div>
+  </body>
+  <script src="/Project Basic js/Ishushi.js"></script>
+</html>
