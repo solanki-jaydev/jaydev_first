@@ -7,6 +7,10 @@
     <title>Ishushi</title>
     <link rel="stylesheet" href="/CSS/bootstrap.min.css" />
     <link rel="stylesheet" href="/JS/bootstrap.bundle.min.js" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css"
+    />
   </head>
   <body>
     <div
@@ -20,68 +24,103 @@
     <div class="container">
       <ul>
         <li>
-          <p>This is the mode changer.</p>
+          <p>"This is mode changer."</p>
         </li>
-        <div class="btn btn-primary" id="Mode">Mode</div>
+        <div class="btn btn-outline-info " id="Mode">
+          <div class="d-flex p-1">
+
+            <span id="modeText" class="fs-4 ">Mode </span>
+            <img
+              src="img/change.jpg"
+              id="img1"
+              class="img-fluid "
+              style="width: 35px"
+              alt="Mode Icon"
+            />
+          </div>
+        </div>
         <br />
         <br />
         <hr />
         <!-- ____________________ -->
-        <li>
-          <p>
-            This is the background color changer. First is a according array and
-            second is a according random index. third is genrate color with hex
-            color & it's random.
-          </p>
-          <div class="button-group d-flex justify-content-evenly">
-            <div
-              col-6
-              class="btn btn-outline-success text-light"
-              id="bg_changer"
-            >
-              Bg-changer
-            </div>
-            <div
-              col-6
-              class="btn btn-outline-danger text-light"
-              id="bg_changer2"
-            >
-              Radom_Bg
-            </div>
-            <div
-              col-6
-              class="btn btn-outline-warning text-light"
-              id="hex_color"
-            >
-              Hex_color
-            </div>
-          </div>
-        </li>
+<li>
+  <p class="mt-3">
+    This is the background-color changer.
+    <hr class="w-25" />
+    First is according to array. <br />
+    Second is according to random index. <br />
+    Third generates a color with hex code & it's random.
+  </p>
+
+  <div class="row row-cols-1 row-cols-md-3 g-3 text-center">
+
+    <!-- Bg_change button + box -->
+    <div class="col d-flex flex-column align-items-center">
+      <div class="btn btn-outline-success text-light mb-2" id="bg_changer">
+        Bg_change
+      </div>
+      <div class="border border-3 border-dark rounded-3 w-100 text-center p-2" id="cg">color</div>
+    </div>
+
+    <!-- Radom_Bg button + box -->
+    <div class="col d-flex flex-column align-items-center">
+      <div class="btn btn-outline-danger text-light mb-2" id="bg_changer2">
+        Radom_Bg
+      </div>
+      <div class="border border-3 border-dark rounded-3 w-100 text-center p-2" id="c" >color</div>
+    </div>
+
+    <!-- Hex_color button + box -->
+    <div class="col d-flex flex-column align-items-center">
+      <div class="btn btn-outline-warning text-light mb-2" id="hex_color">
+        Hex_color
+      </div>
+      <div class="border border-3 border-dark rounded-3 w-100 text-center p-2" id="d">
+        #RRGGBB
+      </div>
+    </div>
+
+  </div>
+</li>
+
         <br />
         <hr />
         <!-- ___________________________________________________________________ -->
         <li>
           <p>This is a game. rock paper scissors.</p>
           <br />
-          <div class="container d-flex justify-content-evenly p-1">
-            <div class="choice fs-1 btn btn-outline-light" id="Rock">Rock</div>
-            <div class="choice fs-1 btn btn-outline-light" id="Paper">
-              Paper
-            </div>
-            <div class="choice fs-1 btn btn-outline-light" id="Scissors">
-              Scissors
-            </div>
-          </div>
+          <div class="container d-flex justify-content-evenly flex-wrap gap-3">
+
+  <!-- Rock -->
+  <div class="choice text-center p-3   shadow-sm" id="Rock" style="width: 150px; cursor: pointer;">
+    <img src="img/rock.jpg" class="img-fluid mb-2" alt="rock" />
+    <div class="fs-5">Rock</div>
+  </div>
+
+  <!-- Paper -->
+  <div class="choice text-center p-3 shadow-sm" id="Paper" style="width: 150px; cursor: pointer;">
+    <img src="img/paper.jpg" class="img-fluid mb-2" alt="paper" />
+    <div class="fs-5">Paper</div>
+  </div>
+
+  <!-- Scissors -->
+  <div class="choice text-center p-3 shadow-sm" id="Scissors" style="width: 150px; cursor: pointer;">
+    <img src="img/scissor.jpg" class="img-fluid mb-2" alt="scissors" />
+    <div class="fs-5">Scissors</div>
+  </div>
+
+</div>
+
           <br />
           <p class="result text-center text-dark rounded-5 fs-2">
             Play Your Move.
           </p>
-          <div class="container fs-5 raw d-flex justify-content-between">
+          <div class="container fs-5 raw d-flex justify-content-evenly">
             <p class="m-1 fs-3 border border-3 rounded-3 p-2">
-              USER SCORE : <span class="uscore fs-3">0</span>
+              USER : <span class="uscore fs-3">0</span>
             </p>
             <p class="m-1 fs-3 border border-3 rounded-3 p-2">
-              COMPUTER SCORE: <span class="cscore fs-3">0</span>
+              COMPUTER : <span class="cscore fs-3">0</span>
             </p>
           </div>
         </li>
@@ -89,9 +128,7 @@
         <hr />
         <li>
           <div class="mb-3">
-            <label for="genrate" class="form-label"
-              >Text Genrate</label
-            >
+            <label for="genrate" class="form-label">Text Generate</label>
             <input
               type="text"
               class="form-control"
@@ -99,7 +136,11 @@
               placeholder="Type something"
             />
           </div>
-          <div class="container" id="typedText"><ul>Todo List of ...</ul></div>
+          <div class="container" id="typedText">
+            <ul>
+              To-do List of ...
+            </ul>
+          </div>
         </li>
       </ul>
       <br />

@@ -6,16 +6,31 @@ document.body.style.color = "white";
 
 // let's start dark mode/light mode
 
+// let isDark = false;
+// let changer = document.querySelector("#Mode");
+// let icon = document.querySelector("#img1");
+// let tex = document.querySelector("#modeText");
+
+// changer.addEventListener("click", () => {
+//   isDark = !isDark;
+//   document.body.style.backgroundColor = isDark ? "#262222" : "white";
+//   document.body.style.color = isDark ? "white" : "black";
+//   tex.textContent = isDark ? "Light Mode" : "Dark Mode";
+//   icon.src = isDark ? "img/dark.png" : "img/light.png";
+// });
 let isDark = false;
 let changer = document.querySelector("#Mode");
+let icon = document.querySelector("#img1");
+let tex = document.querySelector("#modeText");
 
 changer.addEventListener("click", () => {
   isDark = !isDark;
-  let mode = (document.body.style.backgroundColor = isDark
-    ? "#262222"
-    : "white");
+
+  document.body.style.backgroundColor = isDark ? "#262222" : "white";
   document.body.style.color = isDark ? "white" : "black";
-  changer.textContent = isDark ? "Dark Mode" : "light Mode";
+
+  icon.src = isDark ? "img/darkmode.jpg" : "img/lightmode.jpg";
+  tex.textContent = isDark ? "Light Mode" : "Dark Mode";
 });
 
 //NOTE :' ! ' is the value define true or false when true to false when false to true;
@@ -27,10 +42,13 @@ let index = 0;
 let bg_color = ["lightgray", "lime", "skyblue", "pink", "brown"];
 
 let bg_changer = document.querySelector("#bg_changer");
+let b = document.querySelector("#cg");
 
 bg_changer.addEventListener("click", () => {
-  bg_changer.innerHTML = bg_color[index];
-  document.body.style.backgroundColor = bg_color[index++];
+  b.innerHTML = bg_color[index];
+
+  b.style.backgroundColor = bg_color[index++];
+  b.style.color = "black";
 
   if (index >= bg_color.length) {
     index = 0;
@@ -46,6 +64,7 @@ let last = null;
 let random;
 
 let dif = document.querySelector("#bg_changer2");
+let c = document.querySelector("#c");
 
 dif.addEventListener("click", () => {
   do {
@@ -53,8 +72,9 @@ dif.addEventListener("click", () => {
     //use ternary operator
     // random = random === last ? (random +1) % rang.length : random;
   } while (rang[random] == last);
-  document.body.style.backgroundColor = rang[random];
-  dif.textContent = rang[random];
+  c.style.backgroundColor = rang[random];
+  c.style.color = "black";
+  c.textContent = rang[random];
   last = rang[random];
 });
 
@@ -82,6 +102,7 @@ let hex_color = [
 ];
 
 let chango = document.querySelector("#hex_color");
+let d = document.querySelector("#d");
 chango.addEventListener("click", () => {
   let hex_code = "";
   for (let i = 0; i < 6; i++) {
@@ -89,8 +110,9 @@ chango.addEventListener("click", () => {
 
     hex_code += hex_color[random_val];
   }
-  document.body.style.backgroundColor = "#" + hex_code;
-  chango.textContent = "#" + hex_code;
+  d.style.backgroundColor = "#" + hex_code;
+  d.style.color = "black";
+  d.textContent = "#" + hex_code;
 });
 //____________________________________________________________________________________________________________________________________________________
 // let's start the Gane rock paper scissors
@@ -163,38 +185,35 @@ choices.forEach((choice) => {
 
 //let's start with Text Genrate
 
-const text = document.querySelector('#genrate');
-const typedText = document.querySelector('#typedText');
+const text = document.querySelector("#genrate");
+const typedText = document.querySelector("#typedText");
 
-text.addEventListener('keydown', (event) => {
-  if (event.key === 'Enter' && text.value.trim() !== '') {
+text.addEventListener("keydown", (event) => {
+  if (event.key === "Enter" && text.value.trim() !== "") {
     event.preventDefault();
 
-    const li = document.createElement('li');
+    const li = document.createElement("li");
     li.textContent = text.value;
 
     // Create delete button
-    const delBtn = document.createElement('button');
-    delBtn.textContent = 'Delete';
-    delBtn.style.marginLeft = '100px';
-    delBtn.style.color = 'red';
+    const delBtn = document.createElement("button");
+    delBtn.textContent = "Delete";
+    delBtn.style.marginLeft = "100px";
+    delBtn.style.color = "red";
 
     // Add event listener to delete this li when clicked
-    delBtn.addEventListener('click', () => {
+    delBtn.addEventListener("click", () => {
       typedText.removeChild(li);
     });
 
     li.appendChild(delBtn);
     typedText.appendChild(li);
 
-    text.value = '';
+    text.value = "";
   }
 });
 //If your input is inside a form, pressing Enter might submit the form and reload the page.
 
-// Even if there's no form, browsers can sometimes do unexpected things with the Enter key — especially if you're using buttons, form controls, etc.    
-
-
-
+// Even if there's no form, browsers can sometimes do unexpected things with the Enter key — especially if you're using buttons, form controls, etc.
 
 // more code is use sprike wevsite must useful
